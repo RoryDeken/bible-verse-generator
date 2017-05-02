@@ -1,16 +1,17 @@
 
-var version, section, size, includeTxt, button;
+var version, section, size, includeTxt, button, text = document.getElementById('text');
 
 button = document.getElementById("start");
 button.addEventListener("click", run);
 
-function run(){
+function run(event){
+  event.preventDefault();
 version = document.getElementById('version').value;
 section = document.getElementById('section').value;
 size = document.getElementById('size').value;
 includeTxt = document.getElementById('includeTxt').checked;
 
-alert(version + " " + section + " " + size + " " + includeTxt);
+text.textContent = version + " " + section + " " + size + " " + includeTxt;
 
 }
 
