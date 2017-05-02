@@ -20,31 +20,38 @@
 <h1>Bible Verse Generator</h1>
 <h2>Generate bible book, chapter or verse references as randomly as you want and include the text if you like</h2>
 </header>
-<form>
+<form id="generator">
+  <label>Version</label>
+<select id="version">
+  <option value="1">NASB</option>
+  <option value="2">NIV</option>
+    <option value="3">NLT</option>
+
+</select>
+
   <label>Section</label>
-<select>
-  <option>Old Testament</option>
-    <option>New Testament</option>
-    <option>Both</option>
+<select id="section">
+  <option value="1">Both</option>
+  <option value="2">Old Testament</option>
+    <option value="3">New Testament</option>
+
 </select>
 
 <label>Selection Size</label>
-<select>
-<option>Book</option>
-  <option>Book and Chapter</option>
-  <option>Book, Chapter and verse</option>
+<select id="size">
+<option value="1">Book</option>
+  <option value="2">Book and Chapter</option>
+  <option value ="3">Book, Chapter and verse</option>
 </select>
 <lable>Include Text</label>
-<input type="checkbox" value="Include Text"  >
+<input id="includeTxt" type="checkbox"   placeholder="Include text" >
 
-<button type="submit">Generate</button>
+<button id="start" type="submit">Generate</button>
 </form>
 <section id="output">
 <h3 id="Reference"></h3>
 <div id="text"></div>
-  </section
-
-
+  </section>
   <script src="generator.js"></script>
   </body>
 </html>
