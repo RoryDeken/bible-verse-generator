@@ -6,7 +6,7 @@ button.addEventListener("click", run);
 
 
 var xmlhttp = new XMLHttpRequest();
-var url = "/versions/nasb.json";
+var url = "versions/nasb.json";
 
 xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
