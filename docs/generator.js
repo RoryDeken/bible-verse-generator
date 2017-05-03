@@ -5,9 +5,16 @@ button = document.getElementById("start");
 button.addEventListener("click", run);
 
 
+var xmlhttp = new XMLHttpRequest();
+var url = "/versions/nasb.json";
 
-xmlhttp.open("GET", url, true);
-xmlhttp.send();
+xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        var myArr = JSON.parse(this.responseText);
+        myFunction(myArr);
+    }
+};
+
 
 function myFunction(arr) {
     var out = "";
@@ -27,17 +34,8 @@ size = document.getElementById('size').value;
 includeTxt = document.getElementById('includeTxt').checked;
 
 text.textContent = version + " " + section + " " + size + " " + includeTxt;
-
-var xmlhttp = new XMLHttpRequest();
-var url = "/versions/nasb.json";
-
-xmlhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-        var myArr = JSON.parse(this.responseText);
-        myFunction(myArr);
-    }
-};
-
+xmlhttp.open("GET", url, true);
+xmlhttp.send();
 }
 
 
