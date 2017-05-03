@@ -1,5 +1,5 @@
 
-var version, section, size, includeTxt, button, text = document.getElementById('text');
+var data, version, section, size, includeTxt, button, text = document.getElementById('text');
 
 button = document.getElementById("start");
 button.addEventListener("click", run);
@@ -10,21 +10,13 @@ var url = "versions/nasb.json";
 
 xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-        var myArr = JSON.parse(this.responseText);
-        myFunction(myArr);
+        data = JSON.parse(this.responseText);
+
     }
 };
 
 
-function myFunction(arr) {
-    var out = "";
-    var i;
-    for(i = 0; i < arr.length; i++) {
-        out += '<a href="' + arr[i].url + '">' +
-        arr[i].display + '</a><br>';
-    }
-    document.getElementById("output").innerHTML = out;
-}
+
 
 function run(event){
   event.preventDefault();
