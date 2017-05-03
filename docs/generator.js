@@ -25,7 +25,6 @@ section = document.getElementById('section').value;
 size = document.getElementById('size').value;
 includeTxt = document.getElementById('includeTxt').checked;
 
-text.textContent = version + " " + section + " " + size + " " + includeTxt;
 xmlhttp.open("GET", url, true);
 xmlhttp.send();
 }
