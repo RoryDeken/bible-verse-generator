@@ -1,5 +1,5 @@
 
-var data, version,url, section, size, includeTxt, button, text = document.getElementById('text');
+var data, version,url, section, size, includeTxt, options = ["nasb.json","niv.json", "nlt.json"] button, text = document.getElementById('text');
 
 button = document.getElementById("start");
 button.addEventListener("click", run);
@@ -24,7 +24,8 @@ version = document.getElementById('version').value;
 section = document.getElementById('section').value;
 size = document.getElementById('size').value;
 includeTxt = document.getElementById('includeTxt').checked;
-// url = "versions/" + version + ".json";
+var ver = options[version];
+url = "versions/" + ver;
 
 
 xmlhttp.open("GET", url, true);
