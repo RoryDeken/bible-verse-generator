@@ -26,7 +26,7 @@ size = document.getElementById('size').value;
 includeTxt = document.getElementById('includeTxt').checked;
 var ver = options[version];
 url = "versions/" + ver;
-
+console.log(url);
 
 xmlhttp.open("GET", url, true);
 xmlhttp.send();
