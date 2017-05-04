@@ -1,12 +1,12 @@
 
-var data, version, section, size, includeTxt, button, text = document.getElementById('text');
+var data, version,url, section, size, includeTxt, button, text = document.getElementById('text');
 
 button = document.getElementById("start");
 button.addEventListener("click", run);
 
 
 var xmlhttp = new XMLHttpRequest();
-var url = "versions/nasb.json";
+url = "versions/nasb.json";
 
 xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
@@ -24,7 +24,7 @@ version = document.getElementById('version').value;
 section = document.getElementById('section').value;
 size = document.getElementById('size').value;
 includeTxt = document.getElementById('includeTxt').checked;
-
+url = "versions/" + version + ".json";
 xmlhttp.open("GET", url, true);
 xmlhttp.send();
 }
