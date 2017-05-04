@@ -18,8 +18,8 @@ xmlhttp.onreadystatechange = function() {
 
 
 
-function run(event){
-  event.preventDefault();
+function run(){
+
 version = document.getElementById('version').value;
 section = document.getElementById('section').value;
 size = document.getElementById('size').value;
