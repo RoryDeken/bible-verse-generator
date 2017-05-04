@@ -25,7 +25,7 @@ section = document.getElementById('section').value;
 size = document.getElementById('size').value;
 includeTxt = document.getElementById('includeTxt').checked;
 var ver = options[version];
-url = "versions/" + ver;
+url = "versions/" + ver - 1;
 console.log(url);
 
 xmlhttp.open("GET", url, true);
