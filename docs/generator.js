@@ -24,7 +24,7 @@ version = document.getElementById('version').value;
 section = document.getElementById('section').value;
 size = document.getElementById('size').value;
 includeTxt = document.getElementById('includeTxt').checked;
-url = "versions/" + version + ".json";
+// url = "versions/" + version + ".json";
 
 
 xmlhttp.open("GET", url, true);
