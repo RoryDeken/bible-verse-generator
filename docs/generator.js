@@ -15,7 +15,7 @@ xmlhttp.onreadystatechange = function() {
         var randomBook = Math.floor(Math.random() * (data.length - 0)) + 0;
         var randomChap = Math.floor(Math.random() * ( data[randomBook].length - 0)) + 0;
         var randomVerse = Math.floor(Math.random() * (data[randomBook][randomChap].length - 0)) + 0;
-        console.log(randomBook + " " + randomChap + " " randomVerse);
+        console.log(randomBook + " " + randomChap + " " + randomVerse);
     }
 };
 
