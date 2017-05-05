@@ -13,7 +13,6 @@ xmlhttp.onreadystatechange = function() {
         data = JSON.parse(this.responseText);
         data = data.bible;
         console.log("random " + Math.floor(Math.random() * (data.bible.length - 0)) + 0 );
-})
         console.log(data);
     }
 };
