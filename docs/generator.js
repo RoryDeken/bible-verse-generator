@@ -20,7 +20,8 @@ xmlhttp.onreadystatechange = function() {
 
 function run(event){
 event.preventDefault();
-version = document.getElementById('version').value.parseInt();
+version = document.getElementById('version').value;
+vesion = version.parseInt();
 section = document.getElementById('section').value;
 size = document.getElementById('size').value;
 includeTxt = document.getElementById('includeTxt').checked;
