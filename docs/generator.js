@@ -13,14 +13,11 @@ xmlhttp.onreadystatechange = function() {
         data = JSON.parse(this.responseText);
         data = data.bible.book;
         var randomBook = Math.floor(Math.random() * (data.length - 0)) + 0;
-        var randomChap = Math.floor(Math.random() * ( data[randomBook].length - 0)) + 0;
-        var randomVerse = Math.floor(Math.random() * (data[randomBook][randomChap].length - 0)) + 0;
+        var randomChap = Math.floor(Math.random() * ( data[randomBook].chapter.length - 0)) + 0;
+        var randomVerse = Math.floor(Math.random() * (data[randomBook].chapter[randomChap].verse.length - 0)) + 0;
         console.log(randomBook + " " + randomChap + " " + randomVerse);
     }
 };
-
-
-
 
 function run(event){
 event.preventDefault();
