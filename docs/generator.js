@@ -24,7 +24,7 @@ version = document.getElementById('version').value;
 section = document.getElementById('section').value;
 size = document.getElementById('size').value;
 includeTxt = document.getElementById('includeTxt').checked;
-var ver = options[version];
+var ver = options[version].toString();
 url = "versions/" + ver - 1;
 console.log(url);
 
