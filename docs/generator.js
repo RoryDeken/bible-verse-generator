@@ -20,11 +20,11 @@ xmlhttp.onreadystatechange = function() {
 
 function run(event){
 event.preventDefault();
-version = document.getElementById('version').value;
+version = document.getElementById('version').value.parseInt();
 section = document.getElementById('section').value;
 size = document.getElementById('size').value;
 includeTxt = document.getElementById('includeTxt').checked;
-var ver = options[version].toString();
+var ver = options[version];
 url = "versions/" + ver - 1;
 console.log(url);
 
