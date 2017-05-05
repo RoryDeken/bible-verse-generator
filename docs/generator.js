@@ -11,7 +11,7 @@ url = "versions/nasb.json";
 xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
         data = JSON.parse(this.responseText);
-        data = data.bible;
+        data = data.bible.book;
         var random = Math.floor(Math.random() * (data.length - 0)) + 0;
         console.log("random " +  random);
         console.log(data);
