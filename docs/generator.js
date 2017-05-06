@@ -1,5 +1,5 @@
 
-var data, version,url, section, size, includeTxt, versions ["nasb","niv","nlt"], options = ["nasb.json","niv.json", "nlt.json"], button, text = document.getElementById('text');
+var data, version,url, section, size, includeTxt, versions = ["nasb","niv","nlt"], options = ["nasb.json","niv.json", "nlt.json"], button, text = document.getElementById('text');
 
 button = document.getElementById("start");
 button.addEventListener("click", run);
