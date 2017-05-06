@@ -48,7 +48,7 @@ link.setAttribute("href", dest);
 function run(event){
 event.preventDefault();
 version = parseInt(document.getElementById('version').value);
-section = document.getElementById('section').value;
+section = parseInt(document.getElementById('section').value);
 size = document.getElementById('size').value;
 xmlhttp.open("GET", url, true);
 xmlhttp.send();
