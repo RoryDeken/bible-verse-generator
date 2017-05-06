@@ -15,7 +15,7 @@ xmlhttp.onreadystatechange = function() {
         var randomBook = Math.floor(Math.random() * (data.length - 0)) + 0;
         var randomChap = Math.floor(Math.random() * ( data[randomBook].chapter.length - 0)) + 0;
         var randomVerse = Math.floor(Math.random() * (data[randomBook].chapter[randomChap].verse.length - 0)) + 0;
-        console.log(data[randomBook].-name + " " + data[randomBook].chapter[randomChap].-name + " " + data[randomBook].chapter[randomChap].verse[randomVerse].-name);
+      //  console.log(data[randomBook].-name + " " + data[randomBook].chapter[randomChap].-name + " " + data[randomBook].chapter[randomChap].verse[randomVerse].-name);
 
     }
 };
