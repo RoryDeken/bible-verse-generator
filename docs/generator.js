@@ -16,8 +16,7 @@ xmlhttp.onreadystatechange = function() {
         var randomChap = Math.floor(Math.random() * ( data[randomBook].chapter.length - 0)) + 0;
         var randomVerse = Math.floor(Math.random() * (data[randomBook].chapter[randomChap].verse.length - 0)) + 0;
 
-// window.open(dest);
-console.log(size);
+
 switch(size){
 
 case 0: dest = "https://www.biblegateway.com/passage/?search="+ data[randomBook].name + "+" + data[randomBook].chapter[randomChap].name + "%3A" + data[randomBook].chapter[randomChap].verse[randomVerse].name + "&version=" + versions[version - 1 ];
@@ -39,6 +38,7 @@ default: text.innerHTML = "Something went wrong. Sorry. Try reloading the page."
 }
 
 link.setAttribute("href", dest);
+// window.open(dest);
     }
 };
 
@@ -47,9 +47,6 @@ event.preventDefault();
 version = parseInt(document.getElementById('version').value);
 section = document.getElementById('section').value - 1;
 size = document.getElementById('size').value - 1;
-includeTxt = document.getElementById('includeTxt').checked;
-console.log(url);
-
 xmlhttp.open("GET", url, true);
 xmlhttp.send();
 }
