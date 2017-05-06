@@ -12,7 +12,6 @@ xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
         data = JSON.parse(this.responseText);
         data = data.bible.book;
-        run();
         var randomBook = Math.floor(Math.random() * (data.length - 0)) + 0;
         var randomChap = Math.floor(Math.random() * ( data[randomBook].chapter.length - 0)) + 0;
         var randomVerse = Math.floor(Math.random() * (data[randomBook].chapter[randomChap].verse.length - 0)) + 0;
@@ -37,7 +36,8 @@ link.setAttribute("href", dest);
     }
 };
 
-function run(){
+function run(event){
+event.preventDefault();
 version = parseInt(document.getElementById('version').value);
 section = document.getElementById('section').value - 1;
 size = document.getElementById('size').value - 1;
