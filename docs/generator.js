@@ -19,7 +19,7 @@ xmlhttp.onreadystatechange = function() {
 
 
 
-
+console.log(size);
 switch(size){
 
 case 1: dest = "https://www.biblegateway.com/passage/?search="+ data[randomBook].name + "+" + data[randomBook].chapter[randomChap].name + "%3A" + data[randomBook].chapter[randomChap].verse[randomVerse].name + "&version=" + versions[version - 1 ];
@@ -49,7 +49,7 @@ function run(event){
 event.preventDefault();
 version = parseInt(document.getElementById('version').value);
 section = parseInt(document.getElementById('section').value);
-size = document.getElementById('size').value;
+size = parseInt(document.getElementById('size').value);
 xmlhttp.open("GET", url, true);
 xmlhttp.send();
 }
