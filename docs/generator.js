@@ -15,20 +15,26 @@ xmlhttp.onreadystatechange = function() {
         var randomBook = Math.floor(Math.random() * (data.length - 0)) + 0;
         var randomChap = Math.floor(Math.random() * ( data[randomBook].chapter.length - 0)) + 0;
         var randomVerse = Math.floor(Math.random() * (data[randomBook].chapter[randomChap].verse.length - 0)) + 0;
-      text.innerHTML = data[randomBook].name + " " + data[randomBook].chapter[randomChap].name + ":" + data[randomBook].chapter[randomChap].verse[randomVerse].name;
-      link.setAttribute("href", dest);
+
 // window.open(dest);
 console.log(size);
 switch(size){
 
 case 0: dest = "https://www.biblegateway.com/passage/?search="+ data[randomBook].name + "+" + data[randomBook].chapter[randomChap].name + "%3A" + data[randomBook].chapter[randomChap].verse[randomVerse].name + "&version=" + versions[version - 1 ];
+text.innerHTML = data[randomBook].name + " " + data[randomBook].chapter[randomChap].name + ":" + data[randomBook].chapter[randomChap].verse[randomVerse].name;
+
 break;
 
 case 1: dest = "https://www.biblegateway.com/passage/?search="+ data[randomBook].name + "+" + data[randomBook].chapter[randomChap].name + "&version=" + versions[version - 1 ];
+text.innerHTML = data[randomBook].name + " " + data[randomBook].chapter[randomChap].name;
 break;
 
 case 2: dest = "https://www.biblegateway.com/passage/?search="+ data[randomBook].name + "&version=" + versions[version - 1 ];
+text.innerHTML = data[randomBook].name;
 
+break;
+
+default: text.innerHTML = "Something went wrong. Sorry. Try reloading the page.";
 
 }
 
