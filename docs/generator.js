@@ -15,9 +15,10 @@ xmlhttp.onreadystatechange = function() {
         var randomBook = Math.floor(Math.random() * (data.length - 0)) + 0;
         var randomChap = Math.floor(Math.random() * ( data[randomBook].chapter.length - 0)) + 0;
         var randomVerse = Math.floor(Math.random() * (data[randomBook].chapter[randomChap].verse.length - 0)) + 0;
-      console.log(data[randomBook].name + " " + data[randomBook].chapter[randomChap].name + " " + data[randomBook].chapter[randomChap].verse[randomVerse].name);
+      text.innerHTML = data[randomBook].name + " " + data[randomBook].chapter[randomChap].name + " " + data[randomBook].chapter[randomChap].verse[randomVerse].name;
 var dest = "https://www.biblegateway.com/passage/?search="+ data[randomBook].name + "+" + data[randomBook].chapter[randomChap].name + "%3A" + data[randomBook].chapter[randomChap].verse[randomVerse].name + "&version=" + versions[version - 1 ];
 window.open(dest);
+
     }
 };
 
