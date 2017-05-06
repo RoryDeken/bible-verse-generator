@@ -1,5 +1,5 @@
 
-var data, version,url, section, size, includeTxt, options = ["nasb.json","niv.json", "nlt.json"], button, text = document.getElementById('text');
+var data, version,url, section, size, includeTxt, versions ["nasb","niv","nlt"], options = ["nasb.json","niv.json", "nlt.json"], button, text = document.getElementById('text');
 
 button = document.getElementById("start");
 button.addEventListener("click", run);
@@ -16,7 +16,7 @@ xmlhttp.onreadystatechange = function() {
         var randomChap = Math.floor(Math.random() * ( data[randomBook].chapter.length - 0)) + 0;
         var randomVerse = Math.floor(Math.random() * (data[randomBook].chapter[randomChap].verse.length - 0)) + 0;
       console.log(data[randomBook].name + " " + data[randomBook].chapter[randomChap].name + " " + data[randomBook].chapter[randomChap].verse[randomVerse].name);
-var dest = "https://www.biblegateway.com/passage/?search="+ data[randomBook].name + "+" + data[randomBook].chapter[randomChap].name + "%3A" + data[randomBook].chapter[randomChap].verse[randomVerse].name + "&version=" + version;
+var dest = "https://www.biblegateway.com/passage/?search="+ data[randomBook].name + "+" + data[randomBook].chapter[randomChap].name + "%3A" + data[randomBook].chapter[randomChap].verse[randomVerse].name + "&version=" + versions[version];
 window.open(dest);
     }
 };
