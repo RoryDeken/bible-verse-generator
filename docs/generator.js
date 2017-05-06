@@ -1,5 +1,5 @@
 
-var data, version,url, section, dest, size, includeTxt, versions = ["nasb","niv","nlt"], options = ["nasb.json","niv.json", "nlt.json"], button, link = document.getElementById('link'), text = document.getElementById('text');
+var data, version,url, section, randomBook, dest, size, includeTxt, versions = ["nasb","niv","nlt"], button, link = document.getElementById('link'), text = document.getElementById('text');
 
 button = document.getElementById("start");
 button.addEventListener("click", run);
@@ -12,23 +12,26 @@ xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
         data = JSON.parse(this.responseText);
         data = data.bible.book;
-        var randomBook = Math.floor(Math.random() * (data.length - 0)) + 0;
+        var book = Math.floor(Math.random() * (data.length - 0)) + 0;
+        switch(section){case 1: randomBook = book break; case 2: if(book > 38){randomBook = book - 38;}else{randomBook = book;} break; case 3: if(book <= 38){randomBook = book + 27;}else{randomBook = book;} break;}
         var randomChap = Math.floor(Math.random() * ( data[randomBook].chapter.length - 0)) + 0;
         var randomVerse = Math.floor(Math.random() * (data[randomBook].chapter[randomChap].verse.length - 0)) + 0;
 
 
+
+
 switch(size){
 
-case 0: dest = "https://www.biblegateway.com/passage/?search="+ data[randomBook].name + "+" + data[randomBook].chapter[randomChap].name + "%3A" + data[randomBook].chapter[randomChap].verse[randomVerse].name + "&version=" + versions[version - 1 ];
+case 1: dest = "https://www.biblegateway.com/passage/?search="+ data[randomBook].name + "+" + data[randomBook].chapter[randomChap].name + "%3A" + data[randomBook].chapter[randomChap].verse[randomVerse].name + "&version=" + versions[version - 1 ];
 text.innerHTML = data[randomBook].name + " " + data[randomBook].chapter[randomChap].name + ":" + data[randomBook].chapter[randomChap].verse[randomVerse].name;
 
 break;
 
-case 1: dest = "https://www.biblegateway.com/passage/?search="+ data[randomBook].name + "+" + data[randomBook].chapter[randomChap].name + "&version=" + versions[version - 1 ];
+case 2: dest = "https://www.biblegateway.com/passage/?search="+ data[randomBook].name + "+" + data[randomBook].chapter[randomChap].name + "&version=" + versions[version - 1 ];
 text.innerHTML = data[randomBook].name + " " + data[randomBook].chapter[randomChap].name;
 break;
 
-case 2: dest = "https://www.biblegateway.com/passage/?search="+ data[randomBook].name + "&version=" + versions[version - 1 ];
+case 3: dest = "https://www.biblegateway.com/passage/?search="+ data[randomBook].name + "&version=" + versions[version - 1 ];
 text.innerHTML = data[randomBook].name;
 
 break;
@@ -45,8 +48,8 @@ link.setAttribute("href", dest);
 function run(event){
 event.preventDefault();
 version = parseInt(document.getElementById('version').value);
-section = document.getElementById('section').value - 1;
-size = document.getElementById('size').value - 1;
+section = document.getElementById('section').value;
+size = document.getElementById('size').value;
 xmlhttp.open("GET", url, true);
 xmlhttp.send();
 }
