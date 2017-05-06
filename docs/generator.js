@@ -37,8 +37,7 @@ link.setAttribute("href", dest);
     }
 };
 
-function run(event){
-event.preventDefault();
+function run(){
 version = parseInt(document.getElementById('version').value);
 section = document.getElementById('section').value - 1;
 size = document.getElementById('size').value - 1;
