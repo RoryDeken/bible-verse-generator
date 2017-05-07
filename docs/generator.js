@@ -27,7 +27,7 @@ book =  parseInt(Math.floor(Math.random() * (data.length - 0)) - 1);
 randomBook = book;
 randomChap =  parseInt(Math.floor(Math.random() * ( data[randomBook].chapter.length - 0)) - 1);
 randomVerse =  parseInt(Math.floor(Math.random() * (data[randomBook].chapter[randomChap].verse.length - 0))  - 1);
-switch(section){case 1: randomBook = book; break; case 2: if(book > 38){randomBook = book - 38;}else{randomBook = book;} break; case 3: if(book <= 38){randomBook = book + 27;}else{randomBook = book;} break;}
+switch(section){case 1: randomBook = book; break; case 2: if(book > 38){randomBook = book - 38;}else{randomBook = book;} break; case 3: if(book <= 38){randomBook = book + 38;}else{randomBook = book;} break;}
 
 
 switch(size){
