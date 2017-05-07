@@ -13,6 +13,7 @@ xmlhttp.send();
 xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
         data = JSON.parse(this.responseText);
+        data = data.bible.book;
         button.style.opacity = 1;
     }
 };
@@ -22,7 +23,6 @@ event.preventDefault();
 version = parseInt(document.getElementById('version').value);
 section = parseInt(document.getElementById('section').value);
 size = parseInt(document.getElementById('size').value);
-data = data.bible.book;
 book = Math.floor(Math.random() * (data.length - 0)) - 1;
 randomBook = book;
 randomChap = Math.floor(Math.random() * ( data[randomBook].chapter.length - 0)) - 1;
