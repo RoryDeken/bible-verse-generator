@@ -2,24 +2,34 @@
 var data, version,url, book, randomChap, section, randomVerse, randomChap, randomBook, dest, size, includeTxt, versions = ["nasb","niv","nlt"], button, link = document.getElementById('link'), text = document.getElementById('text');
 
 button = document.getElementById("start");
+button.style.css = "opacity:0;"
 button.addEventListener("click", run);
 
 
 var xmlhttp = new XMLHttpRequest();
 url = "versions/nasb.json";
-
+xmlhttp.open("GET", url, true);
+xmlhttp.send();
 xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
         data = JSON.parse(this.responseText);
-        data = data.bible.book;
-        book = Math.floor(Math.random() * (data.length - 0)) - 1;
-        switch(section){case 1: randomBook = book; break; case 2: if(book > 38){randomBook = book - 38;}else{randomBook = book;} break; case 3: if(book <= 38){randomBook = book + 27;}else{randomBook = book;} break;}
-        randomChap = Math.floor(Math.random() * ( data[randomBook].chapter.length - 0)) - 1;
-        randomVerse = Math.floor(Math.random() * (data[randomBook].chapter[randomChap].verse.length - 0))  - 1;
+        button.style.css = "opacity:1;";
+    }
+};
+
+function run(event){
+event.preventDefault();
+version = parseInt(document.getElementById('version').value);
+section = parseInt(document.getElementById('section').value);
+size = parseInt(document.getElementById('size').value);
 
 
+data = data.bible.book;
+book = Math.floor(Math.random() * (data.length - 0)) - 1;
+switch(section){case 1: randomBook = book; break; case 2: if(book > 38){randomBook = book - 38;}else{randomBook = book;} break; case 3: if(book <= 38){randomBook = book + 27;}else{randomBook = book;} break;}
+randomChap = Math.floor(Math.random() * ( data[randomBook].chapter.length - 0)) - 1;
+randomVerse = Math.floor(Math.random() * (data[randomBook].chapter[randomChap].verse.length - 0))  - 1;
 
-console.log( )
 switch(size){
 
 case 1: dest = "https://www.biblegateway.com/passage/?search="+ data[randomBook].name + "+" + data[randomBook].chapter[randomChap].name + "%3A" + data[randomBook].chapter[randomChap].verse[randomVerse].name + "&version=" + versions[version - 1 ];
@@ -42,16 +52,7 @@ default: text.innerHTML = "Something went wrong. Sorry. Try reloading the page."
 
 link.setAttribute("href", dest);
 // window.open(dest);
-    }
-};
 
-function run(event){
-event.preventDefault();
-version = parseInt(document.getElementById('version').value);
-section = parseInt(document.getElementById('section').value);
-size = parseInt(document.getElementById('size').value);
-xmlhttp.open("GET", url, true);
-xmlhttp.send();
 }
 
 
