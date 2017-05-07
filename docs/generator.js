@@ -22,12 +22,11 @@ event.preventDefault();
 version = parseInt(document.getElementById('version').value);
 section = parseInt(document.getElementById('section').value);
 size = parseInt(document.getElementById('size').value);
-randomChap = Math.floor(Math.random() * ( data[randomBook].chapter.length - 0)) - 1;
-randomVerse = Math.floor(Math.random() * (data[randomBook].chapter[randomChap].verse.length - 0))  - 1;
-
 data = data.bible.book;
 book = Math.floor(Math.random() * (data.length - 0)) - 1;
 randomBook = book;
+randomChap = Math.floor(Math.random() * ( data[randomBook].chapter.length - 0)) - 1;
+randomVerse = Math.floor(Math.random() * (data[randomBook].chapter[randomChap].verse.length - 0))  - 1;
 switch(section){case 1: randomBook = book; break; case 2: if(book > 38){randomBook = book - 38;}else{randomBook = book;} break; case 3: if(book <= 38){randomBook = book + 27;}else{randomBook = book;} break;}
 
 
