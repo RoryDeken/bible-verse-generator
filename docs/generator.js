@@ -2,7 +2,7 @@
 var data, version,url, book, randomChap, section, randomVerse, randomChap, randomBook, dest, size, includeTxt, versions = ["nasb","niv","nlt"], button, link = document.getElementById('link'), text = document.getElementById('text');
 
 button = document.getElementById("start");
-button.style.css = "opacity:0;"
+button.style.opacity = 0;
 button.addEventListener("click", run);
 
 
@@ -13,7 +13,7 @@ xmlhttp.send();
 xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
         data = JSON.parse(this.responseText);
-        button.style.css = "opacity:1;";
+        button.style.opacity = 1;
     }
 };
 
