@@ -26,7 +26,7 @@ section = parseInt(document.getElementById('section').value);
 size = parseInt(document.getElementById('size').value);
 book =  parseInt(Math.floor(Math.random() * (data.length - 0)) - 1);
 randomBook = book;
-randomChap =  parseInt(Math.floor(Math.random() * ( data[randomBook].chapter.verse.length - 0)) - 1);
+randomChap =  parseInt(Math.floor(Math.random() * ( data[randomBook].chapter.length - 0)) - 1);
 randomVerse =  parseInt(Math.floor(Math.random() * (data[randomBook].chapter[randomChap].verse.length - 0))  - 1);
 
 switch(section){
@@ -59,7 +59,8 @@ default: text.innerHTML = "Something went wrong. Sorry. Try reloading the page."
 
 link.setAttribute("href", dest);
 // window.open(dest);
-console.log(data[randomBook].lengtht + " " + data[randomBook].chapter[randomChap].name + ":" + data[randomBook].chapter[randomChap].verse[randomVerse].name);
+console.log(data[randomBook].length + " " + data[randomBook].chapter[randomChap].name + ":" + data[randomBook].chapter[randomChap].verse[randomVerse].name);
+conosole.log("Random Book: " + randomBook + "Random Chap: " + randomChap + "Random Verse: " + randomVerse);
 }
 
 
