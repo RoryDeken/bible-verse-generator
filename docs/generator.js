@@ -18,6 +18,10 @@ xmlhttp.onreadystatechange = function() {
     }
 };
 
+for(i = 0; i < data.length, i+=){
+
+}
+
 function run(event){
 event.preventDefault();
 version = parseInt(document.getElementById('version').value);
@@ -31,7 +35,6 @@ randomVerse =  parseInt(Math.floor(Math.random() * (data[randomBook].chapter[ran
 switch(section){
   case 1: randomBook = book; break;
   case 2: if(book > 38){randomBook = book - 38; randomChap =  parseInt(Math.floor(Math.random() * ( data[randomBook].chapter.length - 0)) - 1); randomVerse =  parseInt(Math.floor(Math.random() * (data[randomBook].chapter[randomChap].verse.length - 0))  - 1);
-
  }else{randomBook = book;} break;
   case 3: if(book <= 38){randomBook = book + 38;  randomChap =  parseInt(Math.floor(Math.random() * ( data[randomBook].chapter.length - 0)) - 1); randomVerse =  parseInt(Math.floor(Math.random() * (data[randomBook].chapter[randomChap].verse.length - 0))  - 1); }else{randomBook = book;} break;
 }
@@ -64,7 +67,7 @@ link.setAttribute("href", dest);
 
 
 
-// Randomize through books and then chapters and then verse each with a random selection
+// TODO: Randomize through books and then chapters and then verse each with a random selection
 
 
-// Then open a new tab/window and take the user to that site with a url that is built based on their selection
+// TODO: Then open a new tab/window and take the user to that site with a url that is built based on their selection
