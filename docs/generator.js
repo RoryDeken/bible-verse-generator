@@ -18,10 +18,7 @@ xmlhttp.onreadystatechange = function() {
     }
 };
 
-for(i = 0; i < data.length, i+=){
-
-}
-
+// 0-38 OT  39-65 NT
 function run(event){
 event.preventDefault();
 version = parseInt(document.getElementById('version').value);
@@ -62,7 +59,7 @@ default: text.innerHTML = "Something went wrong. Sorry. Try reloading the page."
 
 link.setAttribute("href", dest);
 // window.open(dest);
-
+console.log(data[randomBook].name + " " + data[randomBook].chapter[randomChap].name + ":" + data[randomBook].chapter[randomChap].verse[randomVerse].name);
 }
 
 
