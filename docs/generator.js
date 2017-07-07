@@ -59,8 +59,8 @@ default: text.innerHTML = "Something went wrong. Sorry. Try reloading the page."
 
 link.setAttribute("href", dest);
 // window.open(dest);
-console.log(data[randomBook].length + " " + data[randomBook].chapter[randomChap].name + ":" + data[randomBook].chapter[randomChap].verse[randomVerse].name);
-conosole.log("Random Book: " + randomBook + "Random Chap: " + randomChap + "Random Verse: " + randomVerse);
+console.log(data[randomBook].chapter.length + " " + data[randomBook].chapter[randomChap].name + ":" + data[randomBook].chapter[randomChap].verse[randomVerse].name);
+console.log("Random Book: " + randomBook + "Random Chap: " + randomChap + "Random Verse: " + randomVerse);
 }
 
 
