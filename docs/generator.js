@@ -18,13 +18,28 @@ xmlhttp.onreadystatechange = function() {
     }
 };
 
-// 0-38 OT  39-65 NT
+// 1-39 OT  40-66 NT Psalms = 19  Proverbs = 20
 function run(event){
 event.preventDefault();
 version = parseInt(document.getElementById('version').value);
 section = parseInt(document.getElementById('section').value);
 size = parseInt(document.getElementById('size').value);
-randomBook =   generateRand(data.length);
+switch(section){
+
+  case 1: randomBook =  generateRand(data.length);
+  break;
+
+  case 2: randomBook =  generateRand(39);
+  break;
+
+  case 3: randomBook =  data[19 + generateRand(2)];
+  break;
+
+  case 4: randomBook =  data[39 + generateRand(27)];
+
+  default: randomBook =  generateRand(data.length);
+}
+
 randomChap =  generateRand(data[randomBook].chapter.length);
 randomVerse = generateRand(data[randomBook].chapter[randomChap].verse.length);
 console.log(version + " " + section + " " + size);
@@ -49,6 +64,8 @@ break;
 default: text.innerHTML = "Something went wrong. Sorry. Try reloading the page.";
 
 }
+
+
 
 link.setAttribute("href", dest);
 // window.open(dest);
