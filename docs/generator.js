@@ -59,7 +59,7 @@ console.log("Random Book: " + randomBook + "Random Chap: " + randomChap + "Rando
 
 function generateRand(max){
 
-  parseInt(Math.floor(Math.random() * (max - 1)));
+return  parseInt(Math.floor(Math.random() * (max - 1)));
 
 }
 
