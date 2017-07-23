@@ -24,18 +24,11 @@ event.preventDefault();
 version = parseInt(document.getElementById('version').value);
 section = parseInt(document.getElementById('section').value);
 size = parseInt(document.getElementById('size').value);
-book =  parseInt(Math.floor(Math.random() * (data.length - 0)) - 1);
-randomBook = book;
-randomChap =  parseInt(Math.floor(Math.random() * ( data[randomBook].chapter.length - 0)) - 1);
-randomVerse =  parseInt(Math.floor(Math.random() * (data[randomBook].chapter[randomChap].verse.length - 0))  - 1);
+randomBook =  generateRand(data.length);
+randomChap =  generateRand(data[randomBook].chapter.length);
+randomVerse = generateRand(data[randomBook].chapter[randomChap].verse.length);
 
-switch(section){
-  case 1: randomBook = book; break;
-  case 2: if(book > 38){randomBook = book - 38; randomChap =  parseInt(Math.floor(Math.random() * ( data[randomBook].chapter.length - 0)) - 1); randomVerse =  parseInt(Math.floor(Math.random() * (data[randomBook].chapter[randomChap].verse.length - 0))  - 1);
- }else{randomBook = book;} break;
-  case 3: if(book <= 38){randomBook = book + 38;  randomChap =  parseInt(Math.floor(Math.random() * ( data[randomBook].chapter.length - 0)) - 1); randomVerse =  parseInt(Math.floor(Math.random() * (data[randomBook].chapter[randomChap].verse.length - 0))  - 1); }else{randomBook = book;} break;
-}
-
+/*
 
 switch(size){
 
@@ -56,14 +49,19 @@ break;
 default: text.innerHTML = "Something went wrong. Sorry. Try reloading the page.";
 
 }
-
+*/
 link.setAttribute("href", dest);
 // window.open(dest);
 console.log(data[randomBook].chapter.length + " " + data[randomBook].chapter[randomChap].name + ":" + data[randomBook].chapter[randomChap].verse[randomVerse].name);
 console.log("Random Book: " + randomBook + "Random Chap: " + randomChap + "Random Verse: " + randomVerse);
+
 }
 
+function generateRand(max){
 
+  parseInt(Math.floor(Math.random() * (max - 1)));
+
+}
 
 // TODO: Randomize through books and then chapters and then verse each with a random selection
 
