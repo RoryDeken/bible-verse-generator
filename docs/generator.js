@@ -35,7 +35,7 @@ switch(section){
   case 3: randomBook =  data[19 + generateRand(3)];
   break;
 
-  case 4: randomBook =  data[39 + generateRand(27)];
+  case 4: randomBook =  data[generateRand(39, true, 66 )];
 
   default: randomBook =  generateRand(data.length);
 }
@@ -74,9 +74,13 @@ console.log("Random Book: " + randomBook + " Random Chap: " + randomChap + " Ran
 
 }
 
-function generateRand(max){
+function generateRand(max, sub, min = 0 ){
 
-return  parseInt(Math.floor(Math.random() * (max - 1)));
+if(sub){
+  max = max -1;
+}
+
+return  parseInt(Math.floor(Math.random() * (max - min) + min));
 
 }
 
