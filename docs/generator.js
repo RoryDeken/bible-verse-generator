@@ -24,11 +24,11 @@ event.preventDefault();
 version = parseInt(document.getElementById('version').value);
 section = parseInt(document.getElementById('section').value);
 size = parseInt(document.getElementById('size').value);
-randomBook =  generateRand(data.length);
+randomBook =   generateRand(data.length);
 randomChap =  generateRand(data[randomBook].chapter.length);
 randomVerse = generateRand(data[randomBook].chapter[randomChap].verse.length);
+console.log(version + " " + section + " " + size);
 
-/*
 
 switch(size){
 
