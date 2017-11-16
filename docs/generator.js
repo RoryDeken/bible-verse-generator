@@ -26,38 +26,38 @@ section = parseInt(document.getElementById('section').value);
 size = parseInt(document.getElementById('size').value);
 switch(section){
 
-  case 1: randomBook =  generateRand(data.length);
+  case 1: randomBook =  data[generateRand(data.length)];
   break;
 
-  case 2: randomBook =  generateRand(39);
+  case 2: randomBook =  data[generateRand(39)];
   break;
 
   case 3: randomBook =  data[18 + generateRand(2)];
   break;
 
-  case 4: randomBook =  data[generateRand(40, true, 66 )]
+  case 4: randomBook =  data[generateRand(66,40 )]
 
-  default: randomBook =  generateRand(data.length);
+  default: randomBook =  data[generateRand(data.length)];
 }
 
-randomChap =  generateRand(data[randomBook].chapter.length);
-randomVerse = generateRand(data[randomBook].chapter[randomChap].verse.length);
+randomChap =  generateRand(randomBook.chapter.length);
+randomVerse = generateRand(randomBook.chapter[randomChap].verse.length);
 
 
 
 switch(size){
 
-case 1: dest = "https://www.biblegateway.com/passage/?search="+ data[randomBook].name + "+" + data[randomBook].chapter[randomChap].name + "%3A" + data[randomBook].chapter[randomChap].verse[randomVerse].name + "&version=" + versions[version - 1 ];
-text.innerHTML = data[randomBook].name + " " + data[randomBook].chapter[randomChap].name + ":" + data[randomBook].chapter[randomChap].verse[randomVerse].name;
+case 1: dest = "https://www.biblegateway.com/passage/?search="+ randomBook.name + "+" + randomBook.chapter[randomChap].name + "%3A" + randomBook.chapter[randomChap].verse[randomVerse].name + "&version=" + versions[version - 1 ];
+text.innerHTML = randomBook.name + " " + randomBook.chapter[randomChap].name + ":" + randomBook.chapter[randomChap].verse[randomVerse].name;
 
 break;
 
-case 2: dest = "https://www.biblegateway.com/passage/?search="+ data[randomBook].name + "+" + data[randomBook].chapter[randomChap].name + "&version=" + versions[version - 1 ];
-text.innerHTML = data[randomBook].name + " " + data[randomBook].chapter[randomChap].name;
+case 2: dest = "https://www.biblegateway.com/passage/?search="+ randomBook.name + "+" + randomBook.chapter[randomChap].name + "&version=" + versions[version - 1 ];
+text.innerHTML = randomBook.name + " " + randomBook.chapter[randomChap].name;
 break;
 
-case 3: dest = "https://www.biblegateway.com/passage/?search="+ data[randomBook].name + "&version=" + versions[version - 1 ];
-text.innerHTML = data[randomBook].name;
+case 3: dest = "https://www.biblegateway.com/passage/?search="+ randomBook.name + "&version=" + versions[version - 1 ];
+text.innerHTML = randomBook.name;
 
 break;
 
@@ -68,17 +68,14 @@ default: text.innerHTML = "Something went wrong. Sorry. Try reloading the page."
 
 
 link.setAttribute("href", dest);
-// window.open(dest);
-console.log(data[randomBook].chapter.length + " " + data[randomBook].chapter[randomChap].name + ":" + data[randomBook].chapter[randomChap].verse[randomVerse].name);
-console.log("Random Book: " + randomBook + " Random Chap: " + randomChap + " Random Verse: " + randomVerse);
 
 }
 
-function generateRand(max, sub = false, min = 0 ){
+function generateRand(max, min = 0){
 
-if(sub){
+
   max = max -1;
-}
+
 
 return  parseInt(Math.floor(Math.random() * (max - min) + min));
 
