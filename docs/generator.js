@@ -40,9 +40,8 @@ switch(section){
   default: randomBook =  data[generateRand(data.length)];
 }
 
-randomChap =  generateRand(randomBook.chapter.length);
-randomVerse = generateRand(randomBook.chapter[randomChap].verse.length);
-
+randomChap =   if is_array(randomBook.chapter) ? generateRand(randomBook.chapter.length): randomBook.chapter;
+randomVerse =  if is_array(randomBook.chapter) ? generateRand(randomBook.chapter[randomChap].verse.length) : generateRand(randomBook.chapter.verse.length);
 
 
 switch(size){
