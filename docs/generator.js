@@ -32,7 +32,7 @@ switch(section){
   case 2: randomBook =  data[generateRand(39)];
   break;
 
-  case 3: randomBook =  data[18 + generateRand(2)];
+  case 3: randomBook =  data[18 + generateRand(3)];
   break;
 
   case 4: randomBook =  data[generateRand(66,40 )]
