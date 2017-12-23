@@ -36,7 +36,8 @@ switch(section){
   break;
 
   case 4: randomBook =  data[generateRand(66,40 )]
-
+  break;
+        
   default: randomBook =  data[generateRand(data.length)];
 }
 
