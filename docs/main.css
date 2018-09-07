@@ -33,4 +33,5 @@ select {
 #start:hover, #link:hover, #start:focus, #link:focus {
     background: #333;
     color: #fdfdfd;
+    cursor:pointer;
 }
