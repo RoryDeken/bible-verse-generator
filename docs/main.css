@@ -26,4 +26,6 @@ select {
     color:#333;
     padding:10px 20px;
     font-size:22px;
+    margin:30px auto;
+    display:block;
 }
