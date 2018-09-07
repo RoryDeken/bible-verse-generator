@@ -28,4 +28,9 @@ select {
     font-size:22px;
     margin:30px auto;
     display:block;
+    text-decoration:none;
+}
+#start:hover, #link:hover, #start:focus, #link:focus {
+    background: #333;
+    color: #fdfdfd;
 }
