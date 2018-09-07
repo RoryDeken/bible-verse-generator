@@ -10,3 +10,20 @@ h1 {
 }
 
 
+label {
+    padding-right:20px;
+    font-size:20px;
+}
+select {
+    border:3px solid #333;
+    font-size:18px;;
+ 
+}
+
+#start {
+    background:#fdfdfd;
+    border:3px solid #333;
+    color:#333;
+    padding:10px 20px;
+    font-size:22px;
+}
