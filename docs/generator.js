@@ -1,11 +1,11 @@
 
-var data, version,url, book, randomChap, section, randomVerse, randomChap, randomBook, dest, size, includeTxt, versions = ["nasb","niv","nlt"], button = document.getElementById('start'), link = document.getElementById('link'), text = document.getElementById('text');
+var data, version,url, book, dice, randomChap, section, randomVerse, randomChap, randomBook, dest, size, includeTxt, versions = ["nasb","niv","nlt"], button = document.getElementById('start'), link = document.getElementById('link'), text = document.getElementById('text');
 
 button = document.getElementById("start");
 button.style.opacity = 0;
 link.style.opacity = 0;
 button.addEventListener("click", run);
-
+dice = document.getElementById("dice");
 
 var xmlhttp = new XMLHttpRequest();
 url = "versions/nasb.json";
@@ -23,6 +23,7 @@ xmlhttp.onreadystatechange = function() {
 // 1-39 OT  40-66 NT Psalms = 19  Proverbs = 20
 function run(event){
 event.preventDefault();
+dice.className = "spin";
 version = parseInt(document.getElementById('version').value);
 section = parseInt(document.getElementById('section').value);
 size = parseInt(document.getElementById('size').value);
