@@ -11,6 +11,10 @@ h1 {
 #dice {
     width:250px;
     height:auto;
+    transition: 0.75s transform linear;
+}
+#dice.spin {
+    transform:rotate(720deg);
 }
 h2, h3 {
 font-weight:200;
