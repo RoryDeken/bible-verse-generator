@@ -1,8 +1,9 @@
 
-var data, version,url, book, randomChap, section, randomVerse, randomChap, randomBook, dest, size, includeTxt, versions = ["nasb","niv","nlt"], button, link = document.getElementById('link'), text = document.getElementById('text');
+var data, version,url, book, randomChap, section, randomVerse, randomChap, randomBook, dest, size, includeTxt, versions = ["nasb","niv","nlt"], button = document.getElementById('start'), link = document.getElementById('link'), text = document.getElementById('text');
 
 button = document.getElementById("start");
 button.style.opacity = 0;
+link.style.opacity = 0;
 button.addEventListener("click", run);
 
 
@@ -68,6 +69,7 @@ default: text.innerHTML = "Something went wrong. Sorry. Try reloading the page."
 
 
 link.setAttribute("href", dest);
+ link.style.opacity = 1;
 
 }
 
