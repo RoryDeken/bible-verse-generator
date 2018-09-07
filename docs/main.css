@@ -5,6 +5,14 @@ body {
     font-weight:200;
 
 }
+a {
+    color: #333;
+    font-weight: 400;
+    text-decoration: none;
+}
+a:hover, a:focus {
+    text-decoration:underline;
+}
 h1 {
     font-family: 'Gloria Hallelujah', cursive;
 }
