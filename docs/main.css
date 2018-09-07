@@ -29,6 +29,8 @@ select {
     margin:30px auto;
     display:block;
     text-decoration:none;
+    max-width:150px;
+    font-weight:400;
 }
 #start:hover, #link:hover, #start:focus, #link:focus {
     background: #333;
