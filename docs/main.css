@@ -20,6 +20,7 @@ label {
 select {
     border:3px solid #333;
     font-size:18px;;
+    cursor:pointer;
  
 }
 
