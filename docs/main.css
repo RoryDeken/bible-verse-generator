@@ -1,5 +1,5 @@
 body {
-    background:#fdfdfd;
+    background:#f4f4f4;
     text-align:center;
     font-family: 'Oswald', sans-serif;
     font-weight:200;
@@ -20,8 +20,14 @@ select {
  
 }
 
+#reference {
+    font-size: 32px;
+    background: #fff;
+    padding: 50px 0px;
+}
+
 #start, #link {
-    background:#fdfdfd;
+    background:#f4f4f4;
     border:3px solid #333;
     color:#333;
     padding:10px 20px;
@@ -34,6 +40,6 @@ select {
 }
 #start:hover, #link:hover, #start:focus, #link:focus {
     background: #333;
-    color: #fdfdfd;
+    color: #f4f4f4;
     cursor:pointer;
 }
