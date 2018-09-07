@@ -16,6 +16,7 @@ xmlhttp.onreadystatechange = function() {
         data = JSON.parse(this.responseText);
         data = data.bible.book;
         button.style.opacity = 1;
+        button.click();
     }
 };
 
