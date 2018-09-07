@@ -20,7 +20,7 @@ select {
  
 }
 
-#start {
+#start, #link {
     background:#fdfdfd;
     border:3px solid #333;
     color:#333;
