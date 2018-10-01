@@ -14,17 +14,17 @@
     "prefer_related_applications": false,
     "icons": [
         {
-            "src": "/images/bible-verse-generator/apple-touch-icon.png",
+            "src": "/bible-verse-generator/apple-touch-icon.png",
             "sizes": "180x180",
             "type": "image/png"
         },
         {
-            "src": "/images/bible-verse-generator/favicon-32x32.png",
+            "src": "/bible-verse-generator/favicon-32x32.png",
             "sizes": "32x32",
             "type": "image/png"
         },
         {
-            "src": "/images/bible-verse-generator/favicon-16x16.png",
+            "src": "/bible-verse-generator/favicon-16x16.png",
             "sizes": "16x16",
             "type": "image/png"
         }
