@@ -1,0 +1,32 @@
+{
+    "dir": "ltr",
+    "lang": "de",
+    "name": "Bible Verse Generator",
+    "scope": "/bible-verse-generator/",
+    "display": "browser",
+    "start_url": "https://rorydeken.github.io/bible-verse-generator/",
+    "short_name": "Bible Verse Gen",
+    "theme_color": "#ffffff",
+    "description": "Bible Verse Generator",
+    "orientation": "any",
+    "background_color": "#da532c",
+    "related_applications": [],
+    "prefer_related_applications": false,
+    "icons": [
+        {
+            "src": "/images/bible-verse-generator/apple-touch-icon.png",
+            "sizes": "180x180",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/bible-verse-generator/favicon-32x32.png",
+            "sizes": "32x32",
+            "type": "image/png"
+        },
+        {
+            "src": "/images/bible-verse-generator/favicon-16x16.png",
+            "sizes": "16x16",
+            "type": "image/png"
+        }
+    ]
+}
