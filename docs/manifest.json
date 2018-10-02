@@ -5,7 +5,7 @@
     "scope": "/bible-verse-generator/",
     "display": "fullscreen",
     "start_url": "https://rorydeken.github.io/bible-verse-generator/",
-    "short_name": "Bible Verse Gen",
+    "short_name": "BVG",
     "theme_color": "#ffffff",
     "description": "Bible Verse Generator",
     "orientation": "any",
