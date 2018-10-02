@@ -3,7 +3,7 @@
     "lang": "de",
     "name": "Bible Verse Generator",
     "scope": "/bible-verse-generator/",
-    "display": "browser",
+    "display": "fullscreen",
     "start_url": "https://rorydeken.github.io/bible-verse-generator/",
     "short_name": "Bible Verse Gen",
     "theme_color": "#ffffff",
