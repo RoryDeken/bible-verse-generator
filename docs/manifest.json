@@ -27,6 +27,16 @@
             "src": "/bible-verse-generator/favicon-16x16.png",
             "sizes": "16x16",
             "type": "image/png"
+        },
+        {
+            "src": "/bible-verse-generator/favicon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/bible-verse-generator/favicon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
         }
     ]
 }
