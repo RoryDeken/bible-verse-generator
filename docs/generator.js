@@ -8,7 +8,7 @@ button.addEventListener("click", run);
 dice = document.getElementById("dice");
 
 var xmlhttp = new XMLHttpRequest();
-url = "versions/nasb.json";
+url = "https://raw.githubusercontent.com/RoryDeken/bible-index/master/bibleIndex.json";
 xmlhttp.open("GET", url, true);
 xmlhttp.send();
 xmlhttp.onreadystatechange = function() {
