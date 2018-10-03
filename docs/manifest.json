@@ -8,8 +8,8 @@
     "short_name": "BVG",
     "theme_color": "#ffffff",
     "description": "Bible Verse Generator",
-    "orientation": "any",
-    "background_color": "#da532c",
+    "orientation": "portrait",
+    "background_color": "#fff",
     "related_applications": [],
     "prefer_related_applications": false,
     "icons": [
