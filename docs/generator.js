@@ -7,8 +7,6 @@ link.style.opacity = 0;
 button.addEventListener("click", run);
 dice = document.getElementById("dice");
 
-data = JSON.parse(data);
-
 function run(event){
 event.preventDefault();
  if(dice.className == "spin"){
